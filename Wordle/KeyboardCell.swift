@@ -25,6 +25,7 @@ class KeyboardCell: UICollectionViewCell {
     labelContainerView.backgroundColor = .gray
     /* Exercise 2:
       1. Assign the argument `string` to the `self.string` private property (see line 14)
+     self.string= string
       2. Change the text of the label to the value of the passed in string
         Tip: Command + click into the UILabel type to see its definition and find out what property to set
       Checkpoint: After finishing this exercise, you should now be able to see the keyboard laid out on the screen! If it's not working, check your work on exercises 1 & 2.
@@ -32,6 +33,10 @@ class KeyboardCell: UICollectionViewCell {
     // START YOUR CODE HERE
     // ...
     // END YOUR CODE HERE
+      
+      self.string = string
+      // Ask about this 
+      label.text = string
   }
 
   // Exercise 5: Call the `didSelectString` closure and pass in the string this cell holds (see line 14)
@@ -40,5 +45,7 @@ class KeyboardCell: UICollectionViewCell {
     // START YOUR CODE HERE
     // ...
     // END YOUR CODE HERE
+      //Closure
+      didSelectString?(string!)
   }
 }
